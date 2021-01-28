@@ -21,7 +21,7 @@ venv/
 ENV/ 
 env.bak/ 
 venv.bak/ 
-CIS_440_Project\CIS440_Env
+CIS_440_Project/CIS440_Env/
 
 # Build results
 [Dd]ebug/
