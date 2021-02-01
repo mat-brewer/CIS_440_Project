@@ -16,11 +16,17 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 
-# Uncomment next two lines to enable admin:
-#from django.contrib import admin
-#from django.urls import path
+
+from django.contrib import admin
+from django.urls import path
+from django.contrib.auth import views as auth_views
+from users import views as user_views
+from django.conf.urls import url, include
 
 urlpatterns = [
-    # Uncomment the next line to enable the admin:
-    #path('admin/', admin.site.urls)
+    path('', include('main.urls')),
+    path('register/', user_views.register, name='register'),
+    path('admin/', admin.site.urls),
+    path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),
+    path('logout/', auth_views.LogoutView.as_view(template_name='users/logout.html'), name='logout')
 ]
