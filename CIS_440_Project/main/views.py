@@ -5,8 +5,9 @@ from django.contrib import messages
 def main(request):
     '''function to display the apps home page'''
 
-    # makes dashboard the home page for logged in users
+    # checks if user is authenticated
     #if request.user.is_authenticated:
     #    return redirect("/dashboard/")
     #else:
+    # essenitally will render the given html page and make that the "view" for main
     return render(request, 'main/index.html')

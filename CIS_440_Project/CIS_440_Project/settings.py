@@ -115,7 +115,9 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = posixpath.join(*(BASE_DIR.split(os.path.sep) + ['static']))
 
+# to use bootstrap with crispy forms
 CRISPY_TEMPLATE_PACK="bootstrap4"
 
+# for login purposes
 LOGIN_REDIRECT_URL = 'home'
 LOGIN_URL = 'login'
