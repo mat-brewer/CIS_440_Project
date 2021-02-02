@@ -57,6 +57,9 @@
     <Compile Include="users\__init__.py" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="main\static\main\main.css">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="main\templates\main\index.html" />
     <Content Include="requirements.txt" />
     <Content Include="users\templates\users\login.html">

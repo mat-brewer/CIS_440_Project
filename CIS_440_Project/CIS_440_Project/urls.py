@@ -24,7 +24,7 @@ from users import views as user_views
 from django.conf.urls import url, include
 
 urlpatterns = [
-    # this is the main url path and includes all urls from 'main'. If there is a url path in main like 'checkout/', then the path will be http://127.0.0.1:8000/checkout
+    # this is the main url path and includes all urls from 'main'. If there is a url path in main like 'checkout/', then the path will be http://127.0.0.1:8000/checkout/
     path('', include('main.urls')),
     path('register/', user_views.register, name='register'),
     path('admin/', admin.site.urls),
