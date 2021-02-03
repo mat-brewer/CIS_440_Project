@@ -45,6 +45,19 @@
     <Compile Include="CIS_440_Project\settings.py" />
     <Compile Include="CIS_440_Project\urls.py" />
     <Compile Include="CIS_440_Project\wsgi.py" />
+    <Compile Include="reviews\admin.py" />
+    <Compile Include="reviews\apps.py" />
+    <Compile Include="reviews\forms.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="reviews\migrations\__init__.py" />
+    <Compile Include="reviews\models.py" />
+    <Compile Include="reviews\templates\reviews\review_confirm_delete.html">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="reviews\tests.py" />
+    <Compile Include="reviews\views.py" />
+    <Compile Include="reviews\__init__.py" />
     <Compile Include="users\admin.py" />
     <Compile Include="users\apps.py" />
     <Compile Include="users\forms.py">
@@ -62,6 +75,19 @@
     </Content>
     <Content Include="main\templates\main\index.html" />
     <Content Include="requirements.txt" />
+    <Content Include="reviews\templates\reviews\index.html" />
+    <Content Include="reviews\templates\reviews\list_view.html">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="reviews\templates\reviews\review_detail.html">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="reviews\templates\reviews\review_form.html">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="reviews\templates\reviews\user_reviews.html">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="users\templates\users\login.html">
       <SubType>Code</SubType>
     </Content>
@@ -80,8 +106,16 @@
     <Folder Include="main\static\main\" />
     <Folder Include="main\templates\" />
     <Folder Include="main\templates\main\" />
+    <Folder Include="reviews\" />
+    <Folder Include="reviews\migrations\" />
+    <Folder Include="reviews\static\" />
+    <Folder Include="reviews\static\reviews\" />
+    <Folder Include="reviews\templates\" />
+    <Folder Include="reviews\templates\reviews\" />
     <Folder Include="users\" />
     <Folder Include="users\migrations\" />
+    <Folder Include="users\static\" />
+    <Folder Include="users\static\users\" />
     <Folder Include="users\templates\" />
     <Folder Include="users\templates\users\" />
   </ItemGroup>

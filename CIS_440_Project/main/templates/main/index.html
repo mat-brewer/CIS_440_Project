@@ -14,8 +14,35 @@
   </head>
 
     <body>
-        <h1>Front Page</h1>
+        <nav class="">
+            <div class="">
+                <a class="" href="{% url 'home' %}">
+                    Navbar with links on top here
+                </a>
+
+                <div class="" id="">
+
+                    <ul class="">
+                            <li class="">
+                                <a class="" href="{% url 'home' %}">Home</a>
+                            </li>
+                        <!--only if a user is logged in (i.e. 'logout' should only be there for logged in users)-->
+                            {% if user.is_authenticated%}
+                                <li class="">
+                                    <a></a>
+                                </li>
+                            {% else %}
+                                <li class="">
+                                    <a></a>
+                                </li>
+                            {% endif %}
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
         <div>
+            <!--If there is a success message (i.e. login success) it will display at the top-->
             {% if messages %}
                 {% for message in messages %}
                     <div class="alert alert-{{ message.tags }}">
@@ -23,6 +50,8 @@
                     </div>
                 {% endfor %}
             {% endif %}
+
+            <!--"Block Content is basically where other HTML files will display. For example, login.html has 'extends main/index.html' so this page should only have things that every other page will have. The top of every other HTML file should extend this one-->
             {% block content %}{% endblock content %}
         </div>
 

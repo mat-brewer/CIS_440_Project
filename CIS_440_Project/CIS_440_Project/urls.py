@@ -21,13 +21,17 @@ from django.contrib import admin
 from django.urls import path
 from django.contrib.auth import views as auth_views
 from users import views as user_views
+from reviews import views as review_views
 from django.conf.urls import url, include
 
 urlpatterns = [
     # this is the main url path and includes all urls from 'main'. If there is a url path in main like 'checkout/', then the path will be http://127.0.0.1:8000/checkout/
     path('', include('main.urls')),
     path('register/', user_views.register, name='register'),
-    path('admin/', admin.site.urls),
     path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),
-    path('logout/', auth_views.LogoutView.as_view(template_name='users/logout.html'), name='logout')
+    path('logout/', auth_views.LogoutView.as_view(template_name='users/logout.html'), name='logout'),
+    path('reviews/', review_views.ReviewListView.as_view(), name='reviews'),
+    path('reviews/create/', review_views.ReviewCreateView.as_view(), name='create-review'),
+    path('reviews/<str:username>', review_views.UserReviewListView.as_view(), name='user-reviews'),
+    path('admin/', admin.site.urls)
 ]
