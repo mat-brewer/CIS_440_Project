@@ -17,3 +17,9 @@ def menu(request):
 
 def about(request):
     return render(request, 'main/about.html')
+
+def order(request):
+    return render(request, 'main/order.html')
+
+def reviews(request):
+    return render(request, 'main/reviews.html')

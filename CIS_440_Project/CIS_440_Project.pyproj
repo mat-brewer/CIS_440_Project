@@ -87,6 +87,8 @@
     <Content Include="main\templates\main\menu.html">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="main\templates\main\reviews.html" />
+    <Content Include="main\templates\main\order.html" />
     <Content Include="orders\templates\orders\index.html" />
     <Content Include="requirements.txt" />
     <Content Include="reviews\templates\reviews\index.html" />
