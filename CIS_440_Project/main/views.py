@@ -11,3 +11,9 @@ def main(request):
     #else:
     # essenitally will render the given html page and make that the "view" for main
     return render(request, 'main/index.html')
+
+def menu(request):
+    return render(request, 'main/menu.html')
+
+def about(request):
+    return render(request, 'main/about.html')
