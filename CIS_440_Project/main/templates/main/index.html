@@ -18,20 +18,64 @@
           li {
               float: left;
               position: relative;
+              top: 35px;
               display: block;
-              padding: 10px;
+              padding: 1em;
               left: 600px;
               font-family: "Monotype Corsiva";
-              font-size: 20px;
+              font-size: 30px;
           }
 
-          div .header{
-              height: 64px;
-              width: 200%;
+           .header{
+              position: sticky;
+              top: 0;
+              left: 0;
           }
+
+          .tacos-header {
+              position: relative;
+              bottom: 25px;
+              margin-left: auto;
+              margin-right: auto;
+              display: block;
+              width: 1950px;
+              height: 45%
+          }
+
+
+          .announcement {
+              width: 100%;
+              position: relative;
+              bottom: 25px;
+              background-color: rgb(192,29,46);
+              height: 54px;
+              margin: 0px;
+              text-align: center;
+              color: rgb(255,255,255);
+          }
+
+
+
+          .covid {
+              text-align: center;
+              font-family: 'AR BERKLEY';
+              font-size: 30px;
+          }
+
+
+          .navbar {
+              padding-top: 0px;
+              bottom: 25px;
+          }
+
       </style>
 
       <div class="header">
+          <div class="announcement">
+              <a class="covid">
+                  Having a safe service is our mission. Learn more
+              </a>
+          </div>
           <nav class="navbar" id="nav" style="background-color:rgb(0,0,0); min-height:150px;">
               <ul class="navbar list">
                   <li>
@@ -49,9 +93,19 @@
                   <li>
                       <a href="{% url 'reviews' %}" style="color: rgb(255,255,255);">Reviews</a>
                   </li>
+
+                  <li>
+                      <a href="#" style="color: rgb(255,255,255)">Log In</a>
+                  </li>
+
               </ul>
 
           </nav>
+          <div class="container-fluid">
+              <header style="border-bottom: none;margin-bottom:0;position:relative;top:0"></header>
+          </div>
+          <img class="tacos-header" src="https://images-gmi-pmc.edge-generalmills.com/e59f255c-7498-4b84-9c9d-e578bf5d88fc.jpg" alt="Alternate Text" />
+
       </div>
 
       <div class="messages">
