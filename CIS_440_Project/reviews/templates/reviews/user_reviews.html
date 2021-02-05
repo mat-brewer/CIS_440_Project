@@ -15,6 +15,11 @@
                     No
                 {% endif %}
             </p>
+            {% if review.user == user %}
+                <div>
+                    <a class="btn btn-outline-danger" href="{% url 'review-delete' review.id %}">Delete</a>
+                </div>
+            {% endif %}
           </div>
     {% endfor %}
     {% if is_paginated %}

@@ -45,6 +45,13 @@
     <Compile Include="CIS_440_Project\settings.py" />
     <Compile Include="CIS_440_Project\urls.py" />
     <Compile Include="CIS_440_Project\wsgi.py" />
+    <Compile Include="orders\admin.py" />
+    <Compile Include="orders\apps.py" />
+    <Compile Include="orders\migrations\__init__.py" />
+    <Compile Include="orders\models.py" />
+    <Compile Include="orders\tests.py" />
+    <Compile Include="orders\views.py" />
+    <Compile Include="orders\__init__.py" />
     <Compile Include="reviews\admin.py" />
     <Compile Include="reviews\apps.py" />
     <Compile Include="reviews\forms.py">
@@ -74,6 +81,7 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include="main\templates\main\index.html" />
+    <Content Include="orders\templates\orders\index.html" />
     <Content Include="requirements.txt" />
     <Content Include="reviews\templates\reviews\index.html" />
     <Content Include="reviews\templates\reviews\list_view.html">
@@ -106,6 +114,10 @@
     <Folder Include="main\static\main\" />
     <Folder Include="main\templates\" />
     <Folder Include="main\templates\main\" />
+    <Folder Include="orders\" />
+    <Folder Include="orders\migrations\" />
+    <Folder Include="orders\templates\" />
+    <Folder Include="orders\templates\orders\" />
     <Folder Include="reviews\" />
     <Folder Include="reviews\migrations\" />
     <Folder Include="reviews\static\" />

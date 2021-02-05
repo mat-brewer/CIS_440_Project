@@ -25,6 +25,16 @@ class ReviewCreateView(LoginRequiredMixin, CreateView):
         return super().form_valid(form)
 
 
+class ReviewDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
+    model = Review
+    success_url = 'reviews/'
+
+    def test_func(self):
+        review = self.get_object()
+        if self.request.user == review.user:
+            return True
+        return False
+
 class ReviewListView(ListView):
     model = Review
     template_name = 'reviews/list_view.html'  # <app>/<model>_<viewtype>.html

@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'users.apps.usersConfig',
     'main.apps.mainConfig',
     'reviews.apps.reviewsConfig',
+    'orders.apps.ordersConfig',
     'crispy_forms'
 ]
 

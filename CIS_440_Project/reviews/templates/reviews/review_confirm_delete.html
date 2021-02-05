@@ -1,1 +1,16 @@
-
+{% extends "main/index.html" %}
+{% block content %}
+    <div class="">
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset class="">
+                <legend class="">Delete Review</legend>
+                <h2>Are you sure you want to delete this Review? "{{ object.review_text }}"</h2>
+            </fieldset>
+            <div class="">
+                <button class="" type="submit">Yes, Delete</button>
+                <a class="" href="{% url 'user-reviews' object.id %}">Cancel</a>
+            </div>
+        </form>
+    </div>
+{% endblock content %}
