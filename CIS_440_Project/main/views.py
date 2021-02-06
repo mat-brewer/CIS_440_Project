@@ -23,3 +23,6 @@ def order(request):
 
 def reviews(request):
     return render(request, 'main/reviews.html')
+
+def login(request):
+    return render(request, 'users/login.html')

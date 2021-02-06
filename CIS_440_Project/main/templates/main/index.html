@@ -35,13 +35,15 @@
           .tacos-header {
               position: relative;
               bottom: 25px;
-              margin-left: auto;
-              margin-right: auto;
+              /*margin-left: auto;*/
+              /*margin-right: auto;*/
               display: block;
-              width: 1950px;
-              height: 45%
+              width: 100%;
+              height: 45%;
           }
 
+
+         
 
           .announcement {
               width: 100%;
@@ -95,7 +97,7 @@
                   </li>
 
                   <li>
-                      <a href="#" style="color: rgb(255,255,255)">Log In</a>
+                      <a href="{% url 'login' %}" style="color: rgb(255,255,255)">Log In</a>
                   </li>
 
               </ul>
@@ -107,7 +109,9 @@
           <img class="tacos-header" src="https://images-gmi-pmc.edge-generalmills.com/e59f255c-7498-4b84-9c9d-e578bf5d88fc.jpg" alt="Alternate Text" />
 
       </div>
+        <div style="position:relative">
 
+        </div>
       <div class="messages">
           {% if messages %}
               {% for message in messages %}
