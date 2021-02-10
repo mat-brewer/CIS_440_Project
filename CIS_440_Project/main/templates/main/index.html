@@ -91,6 +91,7 @@
       </style>
 
       <div class="header">
+          
           <div class="announcement">
               <a class="covid">
                   We're putting safety first. Dine-in avaliable in select locations.
@@ -127,6 +128,7 @@
 
           </nav>
           
+          {% block content %}
           <div class="container-fluid">
               <header style="border-bottom: none;margin-bottom:0;position:relative;top:0"></header>
           </div>
@@ -162,7 +164,7 @@
           {% endfor %}
           {% endif %}
       </div>
-
-      {% block content %}{% endblock content %}
+      {% endblock content %}
+      {#{% block content %}{% endblock content %}#}
   </body>
 </html>

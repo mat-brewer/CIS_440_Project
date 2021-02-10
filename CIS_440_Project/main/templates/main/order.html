@@ -6,45 +6,9 @@
     <title></title>
 </head>
 <body>
-    <style>
-        li {
-            float: left;
-            position: relative;
-            display: block;
-            padding: 10px;
-            left: 600px;
-            top: 50px;
-            font-family: "Monotype Corsiva";
-            font-size: 20px;
-        }
+    {% extends 'main/index.html' %}
+    {% block content %}
 
-        div .header {
-            height: 64px;
-            width: 200%;
-        }
-    </style>
-
-    <div class="header">
-        <nav class="navbar" id="nav" style="background-color:rgb(0,0,0); min-height:150px;">
-            <ul class="navbar list">
-                <li>
-                    <a href="/" style="color: rgb(255,255,255);">Home</a>
-                </li>
-                <li>
-                    <a href="{% url 'menu' %}" style="color: rgb(255,255,255);">Menu</a>
-                </li>
-                <li>
-                    <a href="{% url 'order' %}" style="color: rgb(255,255,255);">Order</a>
-                </li>
-                <li>
-                    <a href="{% url 'about' %}" style="color: rgb(255,255,255);">About Us</a>
-                </li>
-                <li>
-                    <a href="{% url 'reviews' %}" style="color: rgb(255,255,255);">Reviews</a>
-                </li>
-            </ul>
-
-        </nav>
-    </div>
+    {% endblock content %}
 </body>
 </html>
