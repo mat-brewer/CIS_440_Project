@@ -1,4 +1,4 @@
-{% extends "main/index.html" %}
+{% extends 'main/index.html' %}
 {% load crispy_forms_tags %}
 
 {% block content %}
@@ -6,11 +6,11 @@
     <form method="POST">
         {% csrf_token %}
         <fieldset>
-            <legend>Create Review</legend>
+            <legend>Create Order</legend>
             {{ form|crispy }}
         </fieldset>
         <div>
-            <button type="submit">Submit Review</button>
+            <button type="submit">Submit Order</button>
         </div>
     </form>
 </div>

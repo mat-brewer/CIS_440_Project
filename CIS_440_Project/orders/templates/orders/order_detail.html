@@ -1,0 +1,23 @@
+{% extends 'main/index.html' %}
+{% block content %}
+
+<div>
+Order #{{ object.id }}
+{{ object.time_ordered }}
+</div>
+
+<div>
+    {% for item in object.items.all %}
+        <div>
+            {{ item }}
+        </div>
+    {% endfor %}
+</div>
+
+<div>
+    {{ object.order_total }}
+</div>
+<div>
+    <a class="btn btn-primary" href="{% url 'order-update' object.user object.id %}">Update</a>
+</div>
+{% endblock content%}

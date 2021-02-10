@@ -8,4 +8,4 @@ class MenuItem(models.Model):
     item_Ingredients = models.CharField(max_length=200, default="")
 
     def __str__(self):
-        return f'{self.item_Name}'
+        return f'{self.item_Name} | ${self.item_Price}'

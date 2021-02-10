@@ -89,9 +89,13 @@
     </Content>
     <Content Include="main\templates\main\reviews.html" />
     <Content Include="main\templates\main\order.html" />
-    <Content Include="orders\templates\orders\index.html" />
+    <Content Include="orders\templates\orders\order_detail.html">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="orders\templates\orders\order_form.html">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="requirements.txt" />
-    <Content Include="reviews\templates\reviews\index.html" />
     <Content Include="reviews\templates\reviews\list_view.html">
       <SubType>Code</SubType>
     </Content>
@@ -124,6 +128,8 @@
     <Folder Include="main\templates\main\" />
     <Folder Include="orders\" />
     <Folder Include="orders\migrations\" />
+    <Folder Include="orders\static\" />
+    <Folder Include="orders\static\orders\" />
     <Folder Include="orders\templates\" />
     <Folder Include="orders\templates\orders\" />
     <Folder Include="reviews\" />

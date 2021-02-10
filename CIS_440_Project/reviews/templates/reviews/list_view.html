@@ -7,15 +7,18 @@
             </div>
             <p>{{ review.review_text }}</p>
             <p class="">
-                Would You Reccommend Our Restaraunt to a Friend? 
+                Would You Reccommend Our Restaurant to a Friend? 
                 {% if review.would_you_reccommend_our_restaraunt %}
                     Yes
-                {% elif not review.would_you_reccommend_our_restaraunt %}
+                {% elif not review.would_you_reccommend_our_restaurant %}
                     No
                 {% endif %}
             </p>
           </div>
     {% endfor %}
+
+    <a class="btn btn-primary" href="create/">Review our Restaurant</a>
+
     {% if is_paginated %}
 
       {% if page_obj.has_previous %}
