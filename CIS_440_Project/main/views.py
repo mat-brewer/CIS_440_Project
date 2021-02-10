@@ -1,5 +1,13 @@
 from django.shortcuts import render
 from django.contrib import messages
+from django.views.generic import (
+    ListView, 
+    TemplateView, 
+    DetailView,
+    CreateView, 
+    UpdateView, 
+    DeleteView)
+from .models import MenuItem
 
 # Create your views here.
 def main(request):
@@ -12,8 +20,11 @@ def main(request):
     # essenitally will render the given html page and make that the "view" for main
     return render(request, 'main/index.html')
 
-def menu(request):
-    return render(request, 'main/menu.html')
+class MenuListView(ListView):
+    template_name = 'main/menu.html'
+    model = MenuItem
+    context_object_name = "items"
+
 
 def about(request):
     return render(request, 'main/about.html')

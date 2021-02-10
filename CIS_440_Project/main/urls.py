@@ -6,7 +6,7 @@ from . import views
 urlpatterns = [
     # gets the function 'main' from views to display index.html
     path('', views.main, name='home'),
-    path('menu/', views.menu, name='menu'),
+    path('menu/', views.MenuListView.as_view(), name='menu'),
     path('about/', views.about, name='about'),
     path('order/', views.order, name='order'),
     #path('reviews/', views.reviews, name='reviews'),
