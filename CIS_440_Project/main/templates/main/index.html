@@ -15,145 +15,79 @@
 
   <body>
       <style>
-          li {
-              
-              position: relative;
-              float: right;
-              display: inline;
-              padding: 1em;
-              right: 0px;
-              font-family: "Monotype Corsiva";
-              font-size: 25px;
-          }
-
-          .header {
-              position: sticky;
-              top: 0;
-              left: 0;
-
-          }
-
-          .tacos-header {
-              position: relative;
-              bottom: 25px;
-              /*margin-left: auto;*/
-              /*margin-right: auto;*/
-              display: block;
-              width: 100%;
-              height: 510px;
-          }
+         * {
+	margin: 0%;
+	padding: 0%;
+}
 
 
+body {
+	background: url(https://hips.hearstapps.com/del.h-cdn.co/assets/18/11/1520956952-chicken-tacos-horizontal.jpg);
+		background-size: cover;
+		overflow-x: hidden;
+}
 
 
-          .announcement {
-              width: 100%;
-              position: relative;
-              bottom: 25px;
-              background-color: rgb(192,29,46);
-              height: 31px;
-              margin: 0px;
-              text-align: center;
-              color: rgb(255,255,255);
-          }
+.barmenu {
+	width: 100%;
+	background-color: #000;
+	position: absolute;
+	padding-top: 40px;
+	border: none solid black;
+	opacity: 0.9;
+    top: 0px;
+}
+
+ul {
+	float: right;
+
+}
+
+.list {
+	position: absolute;
+	top: 25%;
+	left: 60%;
+}
+
+.list li {
+	float: left;
+	color: white;
+	width: 90px;
+	text-align: center;
+	font-weight: 100;
+	opacity: 0,6;
+	list-style-type: none;
+}
+  
+           
 
 
 
-          .covid {
-              text-align: center;
-              font-family: Rockwell;
-              font-size: inherit;
-          }
-
-
-          .navbar {
-              padding-top: 0px;
-              bottom: 25px;
-              
-          }
-
-
-          .carside {
-              background-color: rgb(34,34,34);
-              width: 100%;
-              bottom: 25px;
-              height: 240px;
-          }
-
-          .pickup {
-              color: rgb(255,255,255);
-              font-family: Ebrima;
-              padding-top: 60px;
-              padding-bottom: 10px;
-              font-size: 38px;
-          }
-
-      </style>
-
-      <div class="header">
-          
-          <div class="announcement">
-              <a class="covid">
-                  We're putting safety first. Dine-in avaliable in select locations.
-              </a>
-          </div>
-          <nav class="navbar" id="nav" style="background-color:rgb(0,0,0); height:145px;">
-              <div class="logo-container">
-                  <div id="logo">
-                      <img class="logo" src="" alt="Resturant Logo"  />
-                  </div>
-              </div>
-              <ul class="navbar list">
-                  <li>
-                      <a href="/" style="color: rgb(255,255,255);">Home</a>
-                  </li>
-                  <li>
-                      <a href="{% url 'menu' %}" style="color: rgb(255,255,255);">Menu</a>
-                  </li>
-                  <li>
-                      <a href="{% url 'order' %}" style="color: rgb(255,255,255);">Order</a>
-                  </li>
-                  <li>
-                      <a href="{% url 'about' %}" style="color: rgb(255,255,255);">About Us</a>
-                  </li>
-                  <li>
-                      <a href="{% url 'reviews' %}" style="color: rgb(255,255,255);">Reviews</a>
-                  </li>
-
-                  <li>
-                      <a href="{% url 'login' %}" style="color: rgb(255,255,255)">Log In</a>
-                  </li>
-
-              </ul>
-
-          </nav>
-          
-          {% block content %}
-          <div class="container-fluid">
-              <header style="border-bottom: none;margin-bottom:0;position:relative;top:0"></header>
-          </div>
-          <img class="tacos-header" src="https://hips.hearstapps.com/del.h-cdn.co/assets/18/11/1520956952-chicken-tacos-horizontal.jpg" alt="Alternate Text" />
-
-      </div>
-       <div class="carside" style="position: relative;">
-           <section id="section1">
-               <div>
-                   <h3 class="pickup" style="text-align:center">Carside Pickup is avaliable!!</h3>
-                   <p style="color: rgb(255,255,255); text-align: center; font-size: 16px;" >
-                       <span>
-                           Tasty Tacos, Burgers, and Chicken are all avaliable for pickup!
-                       </span>
-                      
-                   </p>
-                   <p style="color: rgb(255,255,255); text-align: center; padding-top: 0px; font-size: 16px; ">
-                       <span>
-                           Order online, check in, and we'll deliver to your car in no time!
-                       </span>
-                       
-                   </p>
-               </div>
-           </section>
-       </div>
+        </style>
+        
+        <div class="box">
+		<div class="barmenu">
+			<div class="l">
+				<ul class="list">
+					<li>
+						<a href="{% url 'menu' %}" style="color: rgb(128,128,128);">Menu</a>
+					</li>
+					<li>
+						<a href="{% url 'order' %}" style="color: rgb(128,128,128);">Order</a>
+					</li>
+					<li>
+						<a href="{% url 'about' %}" style="color: rgb(128,128,128);">About Us</a>
+					</li>
+					<li>
+						<a href="{% url 'reviews' %}" style="color: rgb(128,128,128);">Reviews</a>
+					</li>
+					<li>
+						<a href="{% url 'login' %}" style="color: rgb(128,128,128);">Log In</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
         
       <div class="messages">
           {% if messages %}
@@ -164,7 +98,7 @@
           {% endfor %}
           {% endif %}
       </div>
-      {% endblock content %}
-      {#{% block content %}{% endblock content %}#}
+      
+      {% block content %}{% endblock content %}}
   </body>
 </html>
