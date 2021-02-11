@@ -1,11 +1,21 @@
-﻿
+﻿<!DOCTYPE html>
+{% extends 'main/index.html' %}
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    {% block content %}
 
-{% block content %}
 <div>
     {% for item in items %}
     <div>{{ item.item_Name }} | {{ item.item_Ingredients}} | ${{ item.item_Price }}</div>
     {% endfor %}
 </div>
+
 {% endblock content %}
+</body>
+</html>
 
 
