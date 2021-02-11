@@ -4,6 +4,7 @@
     <Name>CIS_440_Project</Name>
     <RootNamespace>CIS_440_Project</RootNamespace>
     <InterpreterId>MSBuild|CIS440_Env|$(MSBuildProjectFullPath)</InterpreterId>
+    <TestFramework>Pytest</TestFramework>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
