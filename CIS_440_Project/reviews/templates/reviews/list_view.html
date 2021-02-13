@@ -1,7 +1,8 @@
-
+{% extends 'main/index.html' %}
 {% block content %}
+<div class="reviews">
     {% for review in reviews %}
-          <div class="">
+          
             <div class="">
               <small class="">Posted by {{ review.user }} on {{ review.date_posted|date:"F d, Y" }}</small>
             </div>
@@ -14,11 +15,11 @@
                     No
                 {% endif %}
             </p>
-          </div>
+          
     {% endfor %}
 
     <a class="btn btn-primary" href="create/">Review our Restaurant</a>
-
+</div>
     {% if is_paginated %}
 
       {% if page_obj.has_previous %}

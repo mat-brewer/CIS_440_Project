@@ -1,4 +1,4 @@
-
+{% extends 'main/index.html' %}
 {% load crispy_forms_tags %}
 
 {% block content %}
@@ -10,7 +10,7 @@
             {{ form|crispy }}
         </fieldset>
         <div>
-            <button type="submit">Sign In</button>
+            <button class="btn btn-primary" type="submit">Sign In</button>
         </div>
     </form>
     <div>

@@ -1,7 +1,7 @@
-
+{% extends 'main/menu.html' %}
 {% load crispy_forms_tags %}
 
-{% block content %}
+{% block order %}
 <div>
     <form method="POST">
         {% csrf_token %}
@@ -10,8 +10,8 @@
             {{ form|crispy }}
         </fieldset>
         <div>
-            <button type="submit">Submit Order</button>
+            <button class="btn btn-primary" type="submit">Submit Order</button>
         </div>
     </form>
 </div>
-{% endblock content %}
+{% endblock order %}

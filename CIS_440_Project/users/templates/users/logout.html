@@ -1,4 +1,4 @@
-
+{% extends 'main/index.html' %}
 {% load crispy_forms_tags %}
 
 {% block content %}
@@ -6,7 +6,7 @@
 
     <div>
             <small>
-            <a href="{% url 'login' %}">Login Here</a>
+            <a class="btn btn-primary" href="{% url 'login' %}">Login Here</a>
             </small>
     </div>
 

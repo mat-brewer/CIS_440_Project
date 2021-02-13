@@ -1,4 +1,4 @@
-
+{% extends 'main/index.html' %}
 {% load crispy_forms_tags %}
 
 {% block content %}
@@ -10,12 +10,12 @@
                     {{ form|crispy }}
             </fieldset>
             <div>
-                <button type="submit">Sign Up</button>
+                <button class="btn btn-primary" type="submit">Sign Up</button>
             </div>
     </form>
     <div>
             <small>
-                Already Have An Account? <a class="ml-2" href="{% url 'login' %}">Sign In</a>
+                Already Have An Account? <a class="" href="{% url 'login' %}">Sign In</a>
             </small>
     </div>
 </div>

@@ -1,4 +1,4 @@
-﻿﻿﻿{% load static %}
+﻿﻿{% load static %}
 <!doctype html>
 <html lang="en">
   <head>
@@ -9,16 +9,16 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Stylesheets -->
-
+	<link href="{% static 'main/main.css' %}" rel="stylesheet">
     <title>CIS 440 Project</title>
   </head>
 
   <body>
       <style>
-         * {
+/*         * {
 	margin: 0%;
 	padding: 0%;
-}
+}*/
 
 
 body {
@@ -37,6 +37,7 @@ body {
 	opacity: 0.9;
     top: 0px;
 }
+
 
 ul {
 	float: right;
@@ -58,12 +59,13 @@ ul {
 	opacity: 0,6;
 	list-style-type: none;
 }
-  
-           
+
+.messages {
+	margin-top: 20px;
+}
 
 
-
-        </style>
+    </style>
 
         <div class="box">
 		<div class="barmenu">
@@ -73,7 +75,7 @@ ul {
 						<a href="{% url 'menu' %}" style="color: rgb(128,128,128);">Menu</a>
 					</li>
 					<li>
-						<a href="{% url 'order' %}" style="color: rgb(128,128,128);">Order</a>
+						<a href="{% url 'new-order' %}" style="color: rgb(128,128,128);">Order</a>
 					</li>
 					<li>
 						<a href="{% url 'about' %}" style="color: rgb(128,128,128);">About Us</a>
@@ -81,14 +83,23 @@ ul {
 					<li>
 						<a href="{% url 'reviews' %}" style="color: rgb(128,128,128);">Reviews</a>
 					</li>
+					{% if not user.is_authenticated%}
 					<li>
-						<a href="{% url 'login' %}" style="color: rgb(128,128,128);">Log In</a>
+						<a href="{% url 'login' %}" style="color: rgb(128,128,128);">Login</a>
 					</li>
+					<li>
+						<a href="{% url 'register' %}" style="color: rgb(128,128,128);">Sign Up</a>
+					</li>
+					{% else %}
+					<li>
+						<a href="{% url 'logout' %}" style="color: rgb(128,128,128);">Logout</a>
+					</li>
+					{% endif %}
 				</ul>
 			</div>
 		</div>
 	</div>
-  {% block content %}
+  
       <div class="messages">
           {% if messages %}
           {% for message in messages %}
@@ -97,8 +108,9 @@ ul {
           </div>
           {% endfor %}
           {% endif %}
+		  {% block content %}      {% endblock content %}
       </div>
-      {% endblock content %}
+	  
      
   </body>
 </html>

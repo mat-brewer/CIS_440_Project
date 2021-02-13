@@ -29,11 +29,5 @@ class MenuListView(ListView):
 def about(request):
     return render(request, 'main/about.html')
 
-def order(request):
-    return render(request, 'main/order.html')
-
-def reviews(request):
-    return render(request, 'reviews/list_view.html')
-
 def login(request):
     return render(request, 'users/login.html')
