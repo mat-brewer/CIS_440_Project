@@ -1,5 +1,5 @@
 /*forms*/
-.forms {
+/*.forms {
     margin-top: 1.5rem;
 }
 
@@ -14,8 +14,17 @@
 
 .form-group input {
     max-width: 50%;
-}
+}*/
 
 .reviews {
+    text-align: center;
+}
+
+
+.order-form {
+    text-align: center;
+}
+
+#id_items {
     text-align: center;
 }
