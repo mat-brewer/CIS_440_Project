@@ -6,13 +6,34 @@
     <title></title>
 </head>
 <body>
+
+        {% block content %}
     <style>
         .menu-header {
+            background-color: white;
+            border-radius: 25px;
+            width: 25%;
+            padding: 10px;
+            margin-left: auto;
+            margin-right: auto;
             text-align: center;
+        }
+        .menu-item {
+            background-color: white;
+            border-radius: 25px;
+            width: 50%;
+            padding: 15px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left;
+        }
+        .add {
+            color: white;
+            background-color: slategray;
+            border-radius: 25px;
+        }
     </style>
 
-
-    {% block content %}
 
 <div>
     {% for item in items %}
@@ -20,21 +41,31 @@
     {% endfor %}
 </div>
 
+<br />
+<br />
+
 <div class="menu-header">
     <h1>Our Menu</h1>
 </div>
-
- <div class="menu-item-1">
-
- </div>
-
-<div class="menu-item-2">
-
+<br />
+<div class="menu-item">
+    <h3>Item 1</h3>
+    <p>Item Ingredients | Item Price</p>
+    <button class="add">Add to Cart</button>
+</div>
+<br />
+<div class="menu-item">
+    <h3>Item 2</h3>
+    <p>Item Ingredients | Item Price</p>
+    <button class="add">Add to Cart</button>
+</div>
+<br />
+<div class="menu-item">
+    <h3>Item 3</h3>
+    <p>Item Ingredients | Item Price</p>
+    <button class="add">Add to Cart</button>
 </div>
 
-<div class="menu-item-3">
-
-</div>
 
     {% block order %}
     {% endblock order %}
