@@ -1,5 +1,5 @@
 /*forms*/
-/*.forms {
+.forms {
     margin-top: 1.5rem;
 }
 
@@ -14,7 +14,7 @@
 
 .form-group input {
     max-width: 50%;
-}*/
+}
 
 .reviews {
     text-align: center;
@@ -27,4 +27,42 @@
 
 #id_items {
     text-align: center;
+    max-width: 50%;
+}
+
+.order-form select {
+    margin: auto;
+}
+
+.order-button {
+    text-align: center;
+}
+
+.review-button {
+    text-align: center;
+}
+
+.order-header {
+    background-color: white;
+    border-radius: 25px;
+    width: 25%;
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.order-fieldset {
+    margin-top: 60px;
+}
+
+.reviews {
+    background-color: white;
+    border-radius: 25px;
+    width: 50%;
+    padding: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
 }

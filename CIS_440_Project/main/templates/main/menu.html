@@ -36,9 +36,9 @@
 
 
 <div>
-    {% for item in items %}
-    <div>{{ item.item_Name }} | {{ item.item_Ingredients}} | ${{ item.item_Price }}</div>
-    {% endfor %}
+    
+    
+    
 </div>
 
 <br />
@@ -48,27 +48,19 @@
     <h1>Our Menu</h1>
 </div>
 <br />
+
+{% for item in items %}
 <div class="menu-item">
-    <h3>Item 1</h3>
-    <p>Item Ingredients | Item Price</p>
-    <button class="add">Add to Cart</button>
+    <h3>{{ item.item_Name }} | ${{ item.item_Price }}</h3>
+    <p>{{ item.item_Ingredients}}</p>
 </div>
 <br />
-<div class="menu-item">
-    <h3>Item 2</h3>
-    <p>Item Ingredients | Item Price</p>
-    <button class="add">Add to Cart</button>
-</div>
-<br />
-<div class="menu-item">
-    <h3>Item 3</h3>
-    <p>Item Ingredients | Item Price</p>
-    <button class="add">Add to Cart</button>
-</div>
+{% endfor %}
 
+    <div class="order-button">
+    <a class="btn btn-primary" href="{% url 'new-order' %}">Click Here to Order</a>
+    </div>
 
-    {% block order %}
-    {% endblock order %}
 {% endblock content %}
 
     

@@ -8,6 +8,7 @@ from django.views.generic import (
     UpdateView, 
     DeleteView)
 from .models import MenuItem
+from orders import models as orders
 
 # Create your views here.
 def main(request):
