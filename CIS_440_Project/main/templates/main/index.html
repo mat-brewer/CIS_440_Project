@@ -24,16 +24,16 @@
 body {
 	background: url(https://hips.hearstapps.com/del.h-cdn.co/assets/18/11/1520956952-chicken-tacos-horizontal.jpg);
 		background-size: cover;
-		overflow-x: hidden;
+		
 }
 
 
-.barmenu {
+.bar {
 	width: 100%;
 	background-color: #000;
 	position: absolute;
 	padding-top: 40px;
-	border: none solid black;
+	
 	opacity: 0.9;
     top: 0px;
 }
@@ -47,7 +47,7 @@ ul {
 .list {
 	position: absolute;
 	top: 25%;
-	left: 60%;
+	left: 55%
 }
 
 .list li {
@@ -56,7 +56,7 @@ ul {
 	width: 90px;
 	text-align: center;
 	font-weight: 100;
-	opacity: 0,6;
+	
 	list-style-type: none;
 }
 
@@ -65,10 +65,12 @@ ul {
 }
 
 
+
+
     </style>
 
         <div class="box">
-		<div class="barmenu">
+		<div class="bar">
 			<div class="l">
 				<ul class="list">
 					<li>
@@ -83,6 +85,9 @@ ul {
 					<li>
 						<a href="{% url 'about' %}" style="color: rgb(128,128,128);">About Us</a>
 					</li>
+                    <li>
+                        <a href="#" style="color: rgb(128,128,128);">Contact</a>
+                    </li>
 					<li>
 						<a href="{% url 'reviews' %}" style="color: rgb(128,128,128);">Reviews</a>
 					</li>
@@ -115,5 +120,8 @@ ul {
       </div>
 	  
      
+
+
+
   </body>
 </html>
