@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 {% extends 'main/index.html' %}
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,9 +6,66 @@
     <title></title>
 </head>
 <body>
-     
-    {% block content %}
 
+    {% block content %}
+    <style>
+        .window {
+            width: 450px;
+            height: 940px;
+            position: absolute;
+            background-color: blanchedalmond;
+            text-align: center;
+            left: 0px;
+            top: 40px;
+        }
+
+        .intro {
+            position: relative;
+            
+            color: black;
+        }
+
+        .wrapper {
+            position: absolute;
+            bottom: 50%;
+        }
+
+        p {
+            font-family: 'Footlight MT';
+            color: black;
+            font-size: 15px;
+        }
+
+        .review {
+            position: relative;
+            right: 150px;
+        }
+
+        .menu {
+            position: absolute;
+            left: 142px;
+
+        }
+
+    </style>
+    <div class="about">
+        <div class="window">
+            <div class="wrapper">
+                <h1 class="intro">
+                    About Us
+                </h1>
+                <p>
+                    Founded in 2010. We are proud to serve our community with the best quality
+                    food for the past 10 years. We have consistently provided the best nutrients
+                    implemented by our chefs. We still remain the #1 spot for the best tacos!
+                </p>
+                <hr />
+                <a class="review" href="{% url 'reviews' %}" style="color: rgb(128,128,128);">Reviews</a>
+                <a class="menu" href="{% url 'menu' %}" style="color: rgb(128,128,128);">Menu</a>
+            </div>
+
+        </div>
+    </div>
     {% endblock content %}
 </body>
 </html> 
