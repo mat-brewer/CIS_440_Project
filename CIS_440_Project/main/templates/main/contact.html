@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 {% extends 'main/index.html' %}
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -11,12 +11,12 @@
     <style>
         .window {
             width: 450px;
-            height: 940px;
+            height: 600px;
             position: absolute;
             background-color: blanchedalmond;
             text-align: center;
-            left: 0px;
-            top: 40px;
+            right: 50px;
+            top: 90px;
         }
 
         .intro {
@@ -27,7 +27,7 @@
 
         .wrapper {
             position: absolute;
-            bottom: 50%;
+            bottom: 20%;
         }
 
         p {
@@ -52,16 +52,35 @@
         <div class="window">
             <div class="wrapper">
                 <h1 class="intro">
-                    About Us
+                    Contact Us 
                 </h1>
                 <p>
-                    Founded in 2010. Tacoville is proud to serve our community with the best quality
-                    food for the past 10 years. We have consistently provided the best nutrients
-                    implemented by our chefs. We still remain the #1 spot for the best tacos!
+                    Tacoville is located at Southeast corner of University Drive and S Rural Rd in Tempe, Arizona.
                 </p>
                 <hr />
-                <a class="review" href="{% url 'reviews' %}" style="color: rgb(128,128,128);">Reviews</a>
-                <a class="menu" href="{% url 'menu' %}" style="color: rgb(128,128,128);">Menu</a>
+                <h2>
+                    Tacoville
+                </h2>
+                <p>
+                    602 E 8th St
+                    <br />
+                    Tempe, AZ 85281
+                </p>
+                <p>
+                    480-689-5431
+                </p>
+                <p>
+                    Monday-Saturday
+                </p>
+                <p>
+                    11:00 AM - 10:00 PM
+                </p>
+                <p>
+                    Sunday
+                </p>
+                <p>
+                    11:00 am - 9:00 PM
+                </p>
             </div>
 
         </div>

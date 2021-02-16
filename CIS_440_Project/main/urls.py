@@ -8,7 +8,8 @@ urlpatterns = [
     path('', views.main, name='home'),
     path('menu/', views.MenuListView.as_view(), name='menu'),
     path('about/', views.about, name='about'),
-    path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login')
+    path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),
+    path('contact/', views.contact, name='contact')
     
    
    

@@ -32,3 +32,7 @@ def about(request):
 
 def login(request):
     return render(request, 'users/login.html')
+
+
+def contact(request):
+    return render(request, 'main/contact.html')
