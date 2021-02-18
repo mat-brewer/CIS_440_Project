@@ -2,14 +2,14 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-<div>
+<div class="content-section">
     <form method="POST">
         {% csrf_token %}
         <fieldset>
             <legend>Create Review</legend>
             {{ form|crispy }}
         </fieldset>
-        <div>
+        <div class="form-group">
             <button class="btn btn-primary" type="submit">Submit Review</button>
         </div>
     </form>

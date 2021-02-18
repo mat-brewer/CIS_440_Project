@@ -2,9 +2,10 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-    <h2>You have been logged out</h2>
+    
 
-    <div>
+    <div class="logout">
+        <h2>You have been logged out</h2>
             <small>
             <a class="btn btn-primary" href="{% url 'login' %}">Login Here</a>
             </small>

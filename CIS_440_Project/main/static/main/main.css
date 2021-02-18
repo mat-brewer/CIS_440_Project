@@ -1,19 +1,10 @@
 /*forms*/
-.forms {
-    margin-top: 1.5rem;
-}
-
-.forms input, select {
-    max-width: 50%;
-}
-
-.form-group {
-    margin-left: 2rem;
-    margin-right: 2rem;
-}
-
-.form-group input {
-    max-width: 50%;
+.content-section {
+    background-color: rgba(255,255,255, .7);
+    padding: 10px 20px;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    margin-bottom: 20px;
 }
 
 .reviews {
@@ -40,6 +31,7 @@
 
 .review-button {
     text-align: center;
+    margin-bottom: 1em;
 }
 
 .order-header {
@@ -57,12 +49,21 @@
     margin-top: 60px;
 }
 
-.reviews {
+.reviews-list {
     background-color: white;
     border-radius: 25px;
     width: 50%;
     padding: 15px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 1em;
     text-align: left;
+}
+
+.reviews {
+    text-align: center;
+}
+
+.logout {
+    text-align: center;
 }

@@ -23,6 +23,7 @@ from django.contrib.auth import views as auth_views
 from users import views as user_views
 from reviews import views as review_views
 from orders import views as order_views
+from users import views as user_views
 from django.conf.urls import url, include
 
 urlpatterns = [
@@ -41,5 +42,6 @@ urlpatterns = [
     path('order/new/', order_views.OrderCreateView.as_view(), name='new-order'),
     path('order/<str:username>/<int:pk>/', order_views.OrderDetailView.as_view(), name='order-detail'),
     path('order/<str:username>/<int:pk>/update', order_views.OrderUpdateView.as_view(), name='order-update'),
-    path('admin/', admin.site.urls)
+    path('admin/', admin.site.urls),
+    path('change-password/', user_views.change_password, name='change-password')
 ]

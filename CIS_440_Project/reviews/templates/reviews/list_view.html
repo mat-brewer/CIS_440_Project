@@ -1,14 +1,18 @@
 {% extends 'main/index.html' %}
 {% block content %}
-<div class="">
+<div class="reviews">
+    <h1>Reviews</h1>
+    <div class="review-button">
+        <a class="btn btn-primary" href="create/">Review our Restaurant</a>
+    </div>
     {% for review in reviews %}
-          <div class="reviews">
+          <div class="reviews-list">
             <div>
-              <small class="">Posted by {{ review.user }} on {{ review.date_posted|date:"F d, Y" }}</small>
+              <small class="">Reviewed by {{ review.user }} on {{ review.date_posted|date:"F d, Y" }}:</small>
             </div>
             <p>{{ review.review_text }}</p>
             <p class="">
-                Would You Reccommend Our Restaurant to a Friend? 
+                <b>Would You Reccommend Our Restaurant to a Friend? </b>
                 {% if review.would_you_reccommend_our_restaraunt %}
                     Yes
                 {% elif not review.would_you_reccommend_our_restaurant %}
@@ -18,9 +22,7 @@
           </div>
     {% endfor %}
 
-    <div class="review-button">
-    <a class="btn btn-primary" href="create/">Review our Restaurant</a>
-    </div>
+
 </div>
     {% if is_paginated %}
 
