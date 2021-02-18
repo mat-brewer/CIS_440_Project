@@ -7,11 +7,6 @@
     margin-bottom: 20px;
 }
 
-.reviews {
-    text-align: center;
-}
-
-
 .order-form {
     text-align: center;
 }
@@ -19,6 +14,7 @@
 #id_items {
     text-align: center;
     max-width: 50%;
+    height: 250px;
 }
 
 .order-form select {
@@ -29,10 +25,7 @@
     text-align: center;
 }
 
-.review-button {
-    text-align: center;
-    margin-bottom: 1em;
-}
+
 
 .order-header {
     background-color: white;
@@ -49,6 +42,10 @@
     margin-top: 60px;
 }
 
+.order-detail {
+    text-align: center;
+}
+
 .reviews-list {
     background-color: white;
     border-radius: 25px;
@@ -62,6 +59,11 @@
 
 .reviews {
     text-align: center;
+}
+
+.review-button {
+    text-align: center;
+    margin-bottom: 1em;
 }
 
 .logout {
