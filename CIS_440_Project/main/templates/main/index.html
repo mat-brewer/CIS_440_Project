@@ -64,10 +64,24 @@ ul {
 	margin-top: 20px;
 }
 
+.title {
+    color: black;
+    font-size: 500%;
+    padding: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
 
 
 
     </style>
+	  
+	  {% block content %}
+	  <div class="title">
+		  <p>Tacoville</p>
+	  </div>
+	  {% endblock content %}
 
         <div class="box">
 		<div class="bar">
@@ -116,7 +130,7 @@ ul {
           </div>
           {% endfor %}
           {% endif %}
-		  {% block content %}      {% endblock content %}
+		  {#{% block content %}      {% endblock content %}#}
       </div>
 	  
      
