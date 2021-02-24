@@ -19,7 +19,7 @@ def main(request):
     #    return redirect("/dashboard/")
     #else:
     # essenitally will render the given html page and make that the "view" for main
-    return render(request, 'main/index.html')
+    return render(request, 'main/home.html')
 
 class MenuListView(ListView):
     template_name = 'main/menu.html'
