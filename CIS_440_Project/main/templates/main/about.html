@@ -11,12 +11,12 @@
     <style>
         .window {
             width: 450px;
-            height: 940px;
+            height: 600px;
             position: absolute;
             background-color: blanchedalmond;
             text-align: center;
-            left: 0px;
-            top: 40px;
+            right: 50px;
+            top: 150px;
         }
 
         .intro {
@@ -26,26 +26,28 @@
         }
 
         .wrapper {
-            position: absolute;
-            bottom: 50%;
+           position: absolute;
+           bottom: 40%;
         }
 
         p {
+           
             font-family: 'Footlight MT';
             color: black;
             font-size: 15px;
         }
 
         .review {
-            position: relative;
-            right: 150px;
+            font-family: 'Footlight MT';
+            margin: auto;
         }
 
         .menu {
-            position: absolute;
-            left: 142px;
-
+            font-family: 'Footlight MT';
+            margin: auto;
         }
+
+     
 
     </style>
     <div class="about">
@@ -60,8 +62,10 @@
                     implemented by our chefs. We still remain the #1 spot for the best tacos!
                 </p>
                 <hr />
-                <a class="review" href="{% url 'reviews' %}" style="color: rgb(128,128,128);">Reviews</a>
-                <a class="menu" href="{% url 'menu' %}" style="color: rgb(128,128,128);">Menu</a>
+                
+                   <a class="review" href="{% url 'reviews' %}" style="color: rgb(128,128,128);">Reviews</a>
+                   <a class="menu" href="{% url 'menu' %}" style="color: rgb(128,128,128);">Menu</a>
+                
             </div>
 
         </div>
